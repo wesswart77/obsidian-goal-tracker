@@ -1,0 +1,214 @@
+/* Goal Tracker Plugin Styles */
+
+.goal-tracker-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+.goal-tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.goal-tracker-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gt-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+}
+
+.gt-btn:hover {
+  background: var(--background-modifier-hover);
+}
+
+.gt-btn.primary {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+
+.gt-btn.primary:hover {
+  background: var(--interactive-accent-hover);
+}
+
+/* Category badges */
+.gt-category {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.gt-cat-personal    { background: #e8d5f5; color: #5b2d8f; }
+.gt-cat-career      { background: #d4e6f1; color: #1a5276; }
+.gt-cat-health      { background: #d5f5e3; color: #1d6a3a; }
+.gt-cat-financial   { background: #fef9e7; color: #7d6608; }
+.gt-cat-learning    { background: #fdebd0; color: #784212; }
+
+/* Goal card */
+.gt-goal-card {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.gt-goal-card:hover {
+  background: var(--background-modifier-hover);
+}
+
+.gt-goal-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.gt-goal-title {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-normal);
+  flex: 1;
+  margin-right: 6px;
+}
+
+.gt-goal-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.gt-goal-date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Progress bar */
+.gt-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.gt-progress-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--background-modifier-border);
+  overflow: hidden;
+}
+
+.gt-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--interactive-accent);
+  transition: width 0.4s ease;
+}
+
+.gt-progress-fill.complete {
+  background: var(--color-green);
+}
+
+.gt-progress-pct {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 30px;
+  text-align: right;
+}
+
+.gt-milestone-count {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Section titles */
+.gt-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 12px 0 6px;
+}
+
+/* Actions row on each card */
+.gt-card-actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.gt-card-btn {
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-muted);
+}
+
+.gt-card-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+/* Empty state */
+.gt-empty {
+  text-align: center;
+  padding: 24px 12px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.gt-empty .gt-empty-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* Progress slider in modal */
+.gt-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.gt-slider-row input[type="range"] {
+  flex: 1;
+}
+
+.gt-slider-value {
+  min-width: 36px;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: right;
+}

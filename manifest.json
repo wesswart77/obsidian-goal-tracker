@@ -1,0 +1,11 @@
+{
+  "id": "goal-tracker",
+  "name": "Goal Tracker",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Set and track goals with quarterly reviews, milestones, progress notes, and outcome logging.",
+  "author": "wesswart77",
+  "authorUrl": "https://github.com/wesswart77",
+  "fundingUrl": "https://www.buymeacoffee.com/wesswart77",
+  "isDesktopOnly": false
+}
