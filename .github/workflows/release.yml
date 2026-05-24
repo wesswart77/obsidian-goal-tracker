@@ -16,4 +16,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           tag="${GITHUB_REF#refs/tags/}"
-          gh release create "$tag" main.js manifest.json styles.css --title "$tag" --notes "Release $tag"
+          gh release view "$tag" 2>/dev/null && echo "Release already exists, skipping." || \
+          gh release create "$tag" main.js manifest.json styles.css LICENSE \
+            --title "$tag" \
+            --notes "Release $tag"
